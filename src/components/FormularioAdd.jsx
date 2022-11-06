@@ -38,7 +38,7 @@ const FormularioAdd = ({ dispatch }) => {
             <input onChange={handleChange}  name="numero" value={numero}  type="text" id='numero' className="form-control" autoComplete='off' />
           </label>   
           <div className="mx-1 d-grid gap-2">
-              <button onClick={handleAdd} className="btn btn-info mt-2">
+              <button onClick={handleAdd} className="btn btn-dark mt-2">
                   Agregar
               </button>
           </div>
