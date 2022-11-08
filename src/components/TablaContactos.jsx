@@ -17,19 +17,22 @@ const TablaContactos = ({ contactos = [], dispatch }) => {
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Nombre</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
                 <th>Numero T</th>
-                <th>Acciones</th>
+                <th>Accion</th>
             </tr>
         </thead>
         <tbody>
-           {contactos.map((contacto) => {
+           {
+           contactos.map((contacto) => {
                const idFinal = contacto.id.split("-")
                
                return (
                 <tr key={contacto.id}>
                     <th>{idFinal[1]}</th>
                     <td>{contacto.nombre}</td>
+                    <td>{contacto.apellido}</td>
                     <td>{contacto.numero}</td>
                     <td>
                         <button onClick={() =>handleDelete(contacto.id)} className="btn btn-danger">Eliminar</button>
